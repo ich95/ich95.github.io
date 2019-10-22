@@ -1,10 +1,10 @@
-/*
+
 window.onbeforeunload = function(event)
     {
         return confirm("Confirm refresh");
     };
 
-*/
+
 function init() {
     var zahl = document.getElementById("zahl").value;
     var deck = document.getElementById("deck").value;
