@@ -1,12 +1,21 @@
+/*
 window.onbeforeunload = function(event)
     {
         return confirm("Confirm refresh");
     };
 
-
+*/
 function init() {
     var zahl = document.getElementById("zahl").value;
     var deck = document.getElementById("deck").value;
+    var que = document.querySelectorAll("div.feld3, div.feld4,div.feld5");
+    console.log(que);
+    for(i = 0; i<que.length;i++){
+        document.getElementById(i).remove();
+    }
+
+
+
     var allgemein = [
         'ČSS',
         'required',
@@ -93,12 +102,5 @@ function init() {
 }
 
 function klasseAendern(a) {
-
-
-    document.getElementById(a).classList.toggle("rot");
-
-
-
-
-
+    document.getElementById(a).classList.toggle("selected");
 }

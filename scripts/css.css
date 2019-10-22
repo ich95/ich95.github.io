@@ -1,34 +1,49 @@
-table tr td {
-    border-collapse: collapse;
-    border: 1px solid black;
+body{
+    background:#121212;
+    color: #8f67fd;;
+    box-sizing: border-box;
+
 }
 
-.rot {
-    background: rgba(255, 0, 0, 0.356);
+.selected {
+    background: rgb(68, 68, 68);
+}
+
+div{
+    
+    justify-content: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border: 1px solid #557A95;
+    overflow: hidden;
+    margin: auto;
+}
+.container{
+   border: none;
 }
 
 .feld3 {
     display: inline-flex;
-    border: 1px solid red;
-    width: 30%;
+    width: calc(100%/3.1);
     height: 120px;
-    text-align: center;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   
 }
 
 .feld4 {
     display: inline-flex;
-    border: 1px solid red;
-    width: 20%;
+    width: calc(100%/4.1);
     height: 120px;
-    text-align: center;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
 }
 .feld5 {
     display: inline-flex;
-    border: 1px solid red;
-    width: 18%;
+    width: calc(100%/5.1);
     height: 120px;
-    text-align: center;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
+
+
+.feld3:hover, .feld4:hover, .feld5:hover{
+    
+    background: rgb(44, 44, 44);
+    
 }
