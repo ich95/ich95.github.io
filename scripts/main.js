@@ -10,7 +10,7 @@ function init() {
     var deck = document.getElementById("deck").value;
     var que = document.querySelectorAll("div.feld3, div.feld4,div.feld5");
     console.log(que);
-    for(i = 0; i<que.length;i++){
+    for (i = 0; i < que.length; i++) {
         document.getElementById(i).remove();
     }
 
@@ -29,7 +29,7 @@ function init() {
         'Freifeld',
         'Ordnung ist wichtig',
         'inteegeer',
-        'nutzt tun-Satz',
+        'Satzbau des Todes of Doom',
         'konfliktlösungs-Skill = 0',
         'nutzlose Hinweise',
         'allgemein falsche Aussprache von Wörtern',
@@ -39,7 +39,7 @@ function init() {
     ];
     var bestOf = [
         'Freifeld',
-        'nutzt tun-Satz',
+        'Satzbau des Todes of Doom',
         'konfliktlösungs-Skill = 0',
         'nutzlose Hinweise',
         'allgemein falsche Aussprache von Wörtern',
@@ -65,21 +65,21 @@ function init() {
         'Haben das jetzt alle?',
         'Fragen bis hier hin?',
         'inteegeer',
-        'nutzt tun-Satz',
+        'Satzbau des Todes of Doom',
         'Diemenschion ("Dimension")',
         'weit ("width")',
         'noch jemand, bei dem das nicht läuft?',
-        
+
     ];
-  
+
 
     var classID = 0;
     console.log(zahl);
     var wahl;
-    switch(deck){
-        case "php": wahl = phpDeck;break;
-        case "allgemein": wahl = allgemein;break;
-        case "bestof":wahl = bestOf;break;
+    switch (deck) {
+        case "php": wahl = phpDeck; break;
+        case "allgemein": wahl = allgemein; break;
+        case "bestof": wahl = bestOf; break;
     }
 
     switch (zahl) {
@@ -97,8 +97,24 @@ function init() {
         document.getElementById('hier').parentNode.insertBefore(div, document.getElementById('hier'));
 
 
-    }
 
+    }
+    if (document.getElementById("c").checked == true) {
+        
+        var run = 0;
+        switch (zahl) {
+            case "9": run = 1;break;
+            case "16": run = 2;break;
+            case "25": run = 3;break;
+            case 9: run = 1;break;
+            case 16: run = 2;break;
+            case 25: run = 3;break;
+        }
+        for (i = 1; i<=run; i++){
+            document.getElementById(Math.floor(Math.random(zahl))).innerHTML = "Freifeld!";
+        }
+
+    }
 }
 
 function klasseAendern(a) {
