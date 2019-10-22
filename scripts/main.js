@@ -6,7 +6,7 @@ window.onbeforeunload = function(event)
 
 function init() {
     var zahl = document.getElementById("zahl").value;
-
+    var deck = document.getElementById("deck").value;
     var allgemein = [
         'ČSS',
         'required',
@@ -27,12 +27,9 @@ function init() {
         'dämliche rhetorische Frage',
         'Haben das jetzt alle?',
         'Fragen bis hier hin?',
-        //'äääääähhhh HAAAALLLLLLLOOOOO',
-        //'schätt ("chat")',
-        //'fuhit ("Fruit")',
-        //'Theat ("t head")',
     ];
     var bestOf = [
+        'Freifeld',
         'nutzt tun-Satz',
         'konfliktlösungs-Skill = 0',
         'nutzlose Hinweise',
@@ -42,7 +39,7 @@ function init() {
         'Fragen bis hier hin?',
         'ruhe bitte',
         'darf ich das bitte erklären'
-    ]
+    ];
 
     var phpDeck = [
         'fuhit ("Fruit")',
@@ -50,7 +47,6 @@ function init() {
         'zis ("this")',
         'dämliche rhetorische Frage',
         'Freifeld',
-        //'Ordnung ist wichtig',
         'ruhe bitte',
         'Zeits ("Size")',
         'grausames Formatieren mit Leerzeichen',
@@ -65,11 +61,17 @@ function init() {
         'weit ("width")',
         'noch jemand, bei dem das nicht läuft?',
         
-    ]
+    ];
   
 
     var classID = 0;
     console.log(zahl);
+    var wahl;
+    switch(deck){
+        case "php": wahl = phpDeck;break;
+        case "allgemein": wahl = allgemein;break;
+        case "bestof":wahl = bestOf;break;
+    }
 
     switch (zahl) {
         case "9": classID = 3; break;
@@ -79,7 +81,7 @@ function init() {
     }
     for (f = 0; f < zahl; f++) {
         var div = document.createElement("div");
-        div.innerHTML = phpDeck[Math.floor(Math.random() * phpDeck.length)];
+        div.innerHTML = wahl[Math.floor(Math.random() * wahl.length)];
         div.setAttribute("id", f);
         div.setAttribute("class", "feld" + classID);
         div.setAttribute("onclick", "klasseAendern(" + f + ")");
