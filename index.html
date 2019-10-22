@@ -1,53 +1,33 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="script/style.css">
-    <script src="script/js.js"></script>
-    <title>Document</title>
+    <link rel="stylesheet" href="scripts/css.css">
+    <title>Bullshit-Bingo</title>
 </head>
 
 <body>
-    <header class="main-nav">
-        <ul>
-            <li>
-                <a href="#Brainstorm">Brainstorm</a>
-                <a href="#warten">warten</a>
-            </li>
-        </ul>
-    </header>
-    <section class="brainstorm" id="Brainstorm">
-        <h2>neues Element</h2>
-        <p>neues Element erstellen</p>
+    <select id="zahl">
+        <option value="9">9</option>
+        <option value="16">16</option>
+        <option value="25">25</option>
 
-        <input type="text" placeholder="Text" id="new">
-        <button onclick="NeuesElement()">neues Element erstellen</button>
+    </select>
+    <button onclick="init()">start</button>
 
 
-        <input type="number" name="" id="del">
-        <button onclick="Delete()">löschen</button>
+    <div class="wrapper" id="parent">
+        
+        <span id="hier"></span>
+    </div>
 
-        <br>
-        <br>
-    </section>
-<section id="neue-Elemente"></section>
 
-<section class="warten" id="warten" >
-<h2>warten</h2>
 
-</section>
 
-<footer class="main-nav">
-    <ul>
-        <li>
-            <a href="#Brainstorm">Brainstorm</a>
-            <a href="#warten">warten</a>
-        </li>
-    </ul>
-</footer>
+    <script src="scripts/main.js"></script>
 </body>
 
 </html>
