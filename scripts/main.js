@@ -71,9 +71,15 @@ console.log(lis);
         'Satzbau des Todes of Doom',
         'Diemenschion ("Dimension")',
         'weit ("width")',
-        'noch jemand, bei dem das nicht läuft?',
+        'noch jemand, bei dem das nicht läuft? / <br> läuft das bei allen',
+        'zedd ("set")',
 
     ];
+var alles = phpDeck.concat(bestOf.concat(allgemein));
+console.log(alles);
+
+console.log(alles[10]);
+
 
 
     var classID = 0;
@@ -83,6 +89,7 @@ console.log(lis);
         case "php": wahl = phpDeck; break;
         case "allgemein": wahl = allgemein; break;
         case "bestof": wahl = bestOf; break;
+        case "alles":wahl = alles;break;
     }
 
     switch (zahl) {
