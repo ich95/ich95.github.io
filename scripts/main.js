@@ -1,19 +1,22 @@
 
-window.onbeforeunload = function(event)
-    {
-        return confirm("Confirm refresh");
-    };
+window.onbeforeunload = function (event) {
+    return confirm("Confirm refresh");
+};
 
 
 function init() {
     var zahl = document.getElementById("zahl").value;
     var deck = document.getElementById("deck").value;
     var que = document.querySelectorAll("div.feld3, div.feld4,div.feld5");
-    console.log(que);
+    var lis = document.querySelectorAll("li.li");
+console.log(lis);
+
     for (i = 0; i < que.length; i++) {
         document.getElementById(i).remove();
     }
-
+    for (f = 0; f < lis.length; f++) {
+        document.getElementById("li"+f).remove();
+    }
 
 
     var allgemein = [
@@ -99,18 +102,25 @@ function init() {
 
 
     }
+    for (i = 0; i < wahl.length; i++) {
+        var li = document.createElement("li");
+        li.setAttribute("id", "li"+i);
+        li.setAttribute("class","li");
+        li.innerHTML = wahl[i];
+        document.getElementById("deckInfo").parentNode.insertBefore(li, document.getElementById("deckInfo"));
+    }
     if (document.getElementById("c").checked == true) {
-        
+
         var run = 0;
         switch (zahl) {
-            case "9": run = 1;break;
-            case "16": run = 2;break;
-            case "25": run = 3;break;
-            case 9: run = 1;break;
-            case 16: run = 2;break;
-            case 25: run = 3;break;
+            case "9": run = 1; break;
+            case "16": run = 2; break;
+            case "25": run = 3; break;
+            case 9: run = 1; break;
+            case 16: run = 2; break;
+            case 25: run = 3; break;
         }
-        for (i = 1; i<=run; i++){
+        for (i = 1; i <= run; i++) {
             document.getElementById(Math.floor(Math.random(zahl))).innerHTML = "Freifeld!";
         }
 
