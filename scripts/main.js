@@ -76,9 +76,9 @@ console.log(lis);
 
     ];
 var alles = phpDeck.concat(bestOf.concat(allgemein));
+alles = [...new Set(alles)];
 console.log(alles);
 
-console.log(alles[10]);
 
 
 
