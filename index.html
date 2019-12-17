@@ -11,33 +11,34 @@
 
 <body>
 
-    <div class="container">
-        <div class="weiss" onclick="main('weiss')">
+    <div id="container" class="container">
+        <div id="wDiv" class="weiss" onclick="main('weiss')">
             <div class="wrapperIN">
                 <p id="weiss">0</p>
             </div>
         </div>
-        <div class="rot" onclick="main('rot')">
+        <div id="rDiv"class="rot" onclick="main('rot')">
             <div class="wrapperIN">
                 <p id="rot">0</p>
             </div>
         </div>
-        <div class="gelb" onclick="main('gelb')">
+        <div id="gDiv"class="gelb" onclick="main('gelb')">
             <div class="wrapperIN">
                 <p id="gelb">0</p>
             </div>
         </div>
-        <div class="blau" onclick="main('blau')">
+        <div id="bDiv" class="blau" onclick="main('blau')">
             <div class="wrapperIN">
                 <p id="blau">0</p>
             </div>
         </div>
-        <div class="reset" onclick="reset()">
+        <div id="reset" class="reset" onclick="reset()">
             <div class="wrapperIN">
-                <p>reset</p>
+                <p>reset</p><br>
+                <p><input type="checkbox" name="" id="quart" onclick="quart()"></p>
             </div>
         </div>
-        <div class="dq" onclick="dq()">
+        <div id="dq" class="dq" onclick="dq()">
             <div class="wrapperIN">
                 <p id="dq">0</p>
             </div>
