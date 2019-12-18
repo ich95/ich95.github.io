@@ -4,14 +4,6 @@ function main(col) {
     localStorage.setItem(col, ++i);
     document.getElementById(col).innerHTML = i;
 }
-function dq() {
-    var i = localStorage.getItem("dq");
-    console.log(i);
-
-    localStorage.setItem("dq", ++i);
-
-    document.getElementById("dq").innerHTML = i;
-}
 
 function reset() {
     localStorage.clear();
