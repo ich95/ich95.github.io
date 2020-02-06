@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Strafzeiten</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="button">
+            <button onclick="count('slalom')" id="slalom">reißen Slalomstange</button><br>
+            <button onclick="count('ball')" id="ball">Medizinball auslassen</button><br>
+            <button onclick="count('laufen')" id="laufen">unvollständiges umlaufen</button><br>
+            <button onclick="reset()">zurücksetzen</button>
+        </div>
+
+
+        <div class="text">
+            <p >
+              <span id="summe">0</span> s
+            </p>
+        </div>
+        <div>
+            <p id="zsm">
+
+            </p>
+        </div>
+
+
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
