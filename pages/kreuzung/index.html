@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Kreuzung</title>
+</head>
+
+<body>
+
+
+
+    <select name="strecke" id="strecke" class="input">
+       <!-- <option value=""></option>-->
+        <option value="2">1000</option>
+        <option value="3">1500</option>
+        <option value="5">3000</option>
+        <option value="12">5000</option>
+        <option value="24">10000</option>
+    </select>
+    <button type="submit" onclick="main()" class="input">ok</button>
+    <button onclick="reset()" class="input">reset</button>
+    <input type="checkbox" id="Quartett" name="Quartett">
+    <label for="Quartett">Quartett</label>
+
+
+<hr>
+<br>
+<div >
+
+    <ul id="in"></ul>
+    <ul id="out"></ul>
+    <ul id="qin"></ul>
+    <ul id="qout"></ul>
+
+</div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
