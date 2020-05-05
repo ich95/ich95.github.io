@@ -2,19 +2,29 @@ function main() {
     reset();
     val = document.getElementById("strecke").value;
     //console.log(val);
+
     console.log(document.getElementById("Quartett").checked);
-    if(document.getElementById("Quartett").checked==true){
-        
+    if (document.getElementById("Quartett").checked == true) {
+
+        document.getElementById("qin").style.display = "block";
+        document.getElementById("qout").style.display = "block";
+
         for (i = 1; i <= val; i++) {
-            addItem(i,"qin","qi");
-            addItem(i,"qout","qo");
+            addItem(i, "qin", "qi");
+            addItem(i, "qout", "qo");
         }
     }
+    else {
+
+        document.getElementById("qin").style.display = "none";
+        document.getElementById("qout").style.display = "none";
+    }
     for (i = 1; i <= val; i++) {
-        addItem(i,"in","i");
-        addItem(i,"out","o");
+        addItem(i, "in", "i");
+        addItem(i, "out", "o");
     }
 
+    
 }
 
 function reset() {
@@ -25,7 +35,7 @@ function reset() {
 
 }
 
-function addItem(nummer,list,pre) {
+function addItem(nummer, list, pre) {
     var ul = document.getElementById(list);
     wert = pre + nummer;
     var li = document.createElement("button");
@@ -44,15 +54,15 @@ function change(nummer) {
     switch (elem.innerHTML) {
         case "I":
             elem.innerHTML = "O";
-            elem.className="out";
+            elem.className = "out";
             break;
         case "O":
             elem.innerHTML = "-";
-            elem.className="runde";
+            elem.className = "runde";
             break;
         case "-":
             elem.innerHTML = "I";
-            elem.className="in";
+            elem.className = "in";
             break;
         default:
             break;
