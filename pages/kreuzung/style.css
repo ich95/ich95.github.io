@@ -15,7 +15,6 @@ body {
 ul {
     background-color: rgb(120, 120, 120);
     margin: 1%;
-    
 }
 
 li {
@@ -25,6 +24,7 @@ li {
     /* width: 20px; */
     /* font-size: 1.5em; */
     /* padding: 3px; */
+    text-align: center;
 }
 
 .input {
@@ -33,7 +33,9 @@ li {
     padding: 0;
 }
 
-.runde, .out, .in {
+.runde,
+.out,
+.in {
     font-size: 1.5em;
     width: 3.95%;
     margin: 0.1%;
@@ -51,18 +53,25 @@ li {
     background-color: rgb(255, 255, 255);
 }
 
-.r, .w, .g, .b {
-    padding:1%;
+.r,
+.w,
+.g,
+.b {
+    padding: 1%;
 }
-.w{
+
+.w {
     background-color: white;
 }
-.r{
+
+.r {
     background-color: rgb(255, 100, 100);
 }
-.g{
+
+.g {
     background-color: rgb(252, 255, 100);
 }
-.b{
+
+.b {
     background-color: rgb(100, 100, 255);
 }
