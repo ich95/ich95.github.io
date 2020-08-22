@@ -13,8 +13,7 @@ function main() {
             addItem(i, "qin", "qi");
             addItem(i, "qout", "qo");
         }
-    }
-    else {
+    } else {
 
         document.getElementById("qin").style.display = "none";
         document.getElementById("qout").style.display = "none";
@@ -23,8 +22,12 @@ function main() {
         addItem(i, "in", "i");
         addItem(i, "out", "o");
     }
+    count = document.getElementById("in").childElementCount;
+    elements = document.querySelectorAll("li");
+    for (let i = 0; i < elements.length; i++) {
+        elements[i].style.width = 95 / count + "%";
 
-    
+    }
 }
 
 function reset() {
@@ -38,7 +41,7 @@ function reset() {
 function addItem(nummer, list, pre) {
     var ul = document.getElementById(list);
     wert = pre + nummer;
-    var li = document.createElement("button");
+    var li = document.createElement("li");
     li.setAttribute('id', wert);
     li.setAttribute("onclick", "change(" + wert + ")");
     li.setAttribute("class", "runde");
